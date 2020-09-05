@@ -684,6 +684,7 @@ def processGenericWinEvent(eventID, window, objectID, childID):
 		winUser.EVENT_OBJECT_LOCATIONCHANGE,
 		winUser.EVENT_OBJECT_SHOW
 	):
+		return
 		if isMSAADebugLoggingEnabled():
 			log.debug("handling winEvent as caret event on focus")
 		NVDAEvent = ("caret", focus)
